@@ -8,3 +8,4 @@ license = "closed"
 keywords = ["rust", "fitness", "tracking", "social media"]
 
 [dependencies]
+uuid = { version = "1.8.0", features = ["v7"] }
