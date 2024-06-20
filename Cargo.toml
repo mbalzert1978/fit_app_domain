@@ -1,0 +1,10 @@
+[package]
+name = "fit_app_domain"
+version = "0.1.0"
+edition = "2021"
+description = "A comprehensive fitness tracker and planner application built with Rust, incorporating social media features."
+authors = ["Markus Iorio <mbalzert@gmail.com>"]
+license = "closed"
+keywords = ["rust", "fitness", "tracking", "social media"]
+
+[dependencies]
