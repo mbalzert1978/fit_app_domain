@@ -3,7 +3,7 @@
 #### 1. **Vorbereitung**
 
 - [ ] Projektstruktur aufsetzen
-- [ ] DDD und Rust spezifische Best Practices recherchieren
+- [x] DDD und Rust spezifische Best Practices recherchieren
 - [ ] Grundlegende Abhängigkeiten in Cargo.toml einrichten (z.B. Serde, Diesel)
 
 #### 2. **Domain Modul erstellen**
@@ -11,7 +11,7 @@
 ##### 2.1. **User Management Context**
 
 - [ ] Entitäten:
-  - [ ] User
+  - [x] User
   - [ ] Follow
 
 - [ ] Verantwortlichkeiten:
