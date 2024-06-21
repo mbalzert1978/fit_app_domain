@@ -174,6 +174,16 @@ Payment
 - amount
 - payment_date
 - payment_status (Enum: Pending, Completed, Failed)
+
+[User] -----< (1:n) >----- [Exercise]
+[User] -----< (1:n) >----- [TrainingPlan]
+[User] -----< (1:n) >----- [TrainingSession]
+[User] -----< (1:n) >----- [Message] -----< (n:1) >----- [User] (sender_id)
+[User] -----< (1:n) >----- [Message] -----< (n:1) >----- [User]
+(receiver_id)
+[User] -----< (1:n) >----- [Follow] -----< (n:1) >----- [User] (follower_id)
+[User] -----< (1:n) >----- [Follow] -----< (n:1) >----- [User] (followee_id)
+[TrainingPlan] -----< (n:m) >----- [Exercise] -----< (n:m) >----- 
 ```
 
 ### Todo-Liste für Entwickler
