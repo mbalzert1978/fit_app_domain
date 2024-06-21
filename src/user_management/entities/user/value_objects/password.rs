@@ -1,6 +1,6 @@
 use std::str::FromStr;
 
-use super::password_hash::PasswordHash;
+use super::{password_hash::PasswordHash, ValueObject};
 
 use crate::prelude::*;
 
@@ -49,6 +49,14 @@ impl FromStr for Password {
 impl From<Password> for String {
     fn from(value: Password) -> Self {
         value.0
+    }
+}
+
+impl ValueObject for Password {
+    type Value = String;
+
+    fn get_value(&self) -> &Self::Value {
+        &self.0
     }
 }
 

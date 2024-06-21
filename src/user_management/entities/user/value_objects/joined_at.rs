@@ -1,6 +1,7 @@
 use crate::prelude::*;
-use crate::shared::abstractions::ValueObject;
 use crate::user_management::entities::user::abstractions::DateTimeProvider;
+
+use super::ValueObject;
 #[derive(Clone)]
 pub(crate) struct JoinDate(String);
 

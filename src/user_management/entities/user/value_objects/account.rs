@@ -1,5 +1,7 @@
-use crate::shared::abstractions::ValueObject;
+use super::ValueObject;
+
 #[derive(Clone)]
+#[cfg_attr(test, derive(Debug, PartialEq))]
 pub(crate) enum AccountType {
     Free,
     Monthly,

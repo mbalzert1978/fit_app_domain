@@ -1,8 +1,10 @@
 use crate::prelude::*;
-use crate::shared::abstractions::ValueObject;
 use crate::user_management::entities::user::abstractions::EmailValidator;
 
+use super::ValueObject;
+
 #[derive(Clone)]
+#[cfg_attr(test, derive(Debug))]
 pub(crate) struct Email(String);
 
 impl ValueObject for Email {

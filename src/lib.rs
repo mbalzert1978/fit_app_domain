@@ -2,5 +2,4 @@
 #![allow(unused_variables)]
 mod error;
 mod prelude;
-mod shared;
 mod user_management;

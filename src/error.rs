@@ -10,6 +10,9 @@ pub enum DomainError {
     PasswordMissingDigit,
     PasswordMissingSymbol,
     IsoDateParsing(String),
+    //Builder
+    MissingRequiredField(String),
+    InvalidId(String),
 }
 
 impl std::fmt::Display for DomainError {
@@ -22,9 +25,3 @@ impl std::fmt::Display for DomainError {
 }
 
 impl std::error::Error for DomainError {}
-
-impl From<uuid::Error> for DomainError {
-    fn from(value: uuid::Error) -> Self {
-        DomainError::Uuid(value.to_string())
-    }
-}
