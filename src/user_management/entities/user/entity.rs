@@ -13,4 +13,13 @@ pub(crate) struct User {
     pub(crate) password: Password,
     pub(crate) account_type: AccountType,
     pub(crate) join_date: JoinDate,
+
+    // Relationships
+    pub(crate) following: Vec<Id>,
+    pub(crate) followers: Vec<Id>,
+    // possible relationships
+    // pub(crate) posts: Vec<Id>,
+    // pub(crate) comments: Vec<Id>,
+    // pub(crate) likes: Vec<Id>,
+    // pub(crate) liked_posts: Vec<Id>,
 }
