@@ -6,8 +6,8 @@ use crate::user_management::entities::user::abstractions::IdProvider;
 
 use super::ValueObject;
 
-#[derive(Clone)]
-#[cfg_attr(test, derive(PartialEq, Debug))]
+#[derive(Clone, PartialEq)]
+#[cfg_attr(test, derive(Debug))]
 pub(crate) struct DomainId<Tid>(Tid);
 
 impl<Tid> DomainId<Tid> {
@@ -25,7 +25,7 @@ impl<Tid> ValueObject for DomainId<Tid> {
 
 impl<Tid> FromStr for DomainId<Tid>
 where
-    Tid: FromStr,
+    Tid: FromStr + PartialEq,
     <Tid as FromStr>::Err: Display,
 {
     type Err = DomainError;
