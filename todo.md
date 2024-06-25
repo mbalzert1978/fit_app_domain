@@ -12,7 +12,12 @@
 
 - [ ] Entitäten:
   - [x] User
-  - [ ] Follow
+  - [ ] Following
+  # Later stages
+  - [ ] Follower
+  - [ ] Post
+  - [ ] Comments
+  - [ ] Likes
 
 - [ ] Verantwortlichkeiten:
   - [ ] Registrierung und Authentifizierung von Nutzern
