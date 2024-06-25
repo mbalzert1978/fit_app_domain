@@ -7,4 +7,12 @@ pub(crate) struct UserCredentials<Tid> {
     password: Password,
 }
 
-impl<Tid> UserCredentials<Tid> {}
+impl<Tid> UserCredentials<Tid> {
+    pub(crate) fn new(user_id: DomainId<Tid>, email: Email, password: Password) -> Self {
+        Self {
+            user_id,
+            email,
+            password,
+        }
+    }
+}
