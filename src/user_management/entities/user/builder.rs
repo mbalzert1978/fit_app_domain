@@ -10,7 +10,7 @@ use super::entity::User;
 use super::value_objects::account::AccountType;
 use super::value_objects::email::Email;
 use super::value_objects::email::EmailParser;
-use super::value_objects::id::Id;
+use super::value_objects::id::DomainId;
 use super::value_objects::joined_at::JoinDate;
 use super::value_objects::joined_at::JoinDateCreator;
 use super::value_objects::password::Password;
@@ -18,15 +18,15 @@ use super::value_objects::password::Password;
 pub(crate) struct UserBuilder<Tdt, Tid> {
     validator: EmailValidator,
     datetime_provider: DateTimeProvider<Tdt>,
-    user_id: Id<Tid>,
+    user_id: DomainId<Tid>,
     user_name: Option<String>,
     email: Option<Email>,
     password: Option<Password>,
     account_type: AccountType,
     join_date: JoinDate,
     // Relationships
-    following: Vec<Id<Tid>>,
-    followers: Vec<Id<Tid>>,
+    following: Vec<DomainId<Tid>>,
+    followers: Vec<DomainId<Tid>>,
 }
 
 impl<Tdt, Tid> UserBuilder<Tdt, Tid>
@@ -43,7 +43,7 @@ where
         Self {
             validator,
             datetime_provider: datetime_provider.clone(),
-            user_id: Id::new(id_provider),
+            user_id: DomainId::new(id_provider),
             user_name: None,
             email: None,
             password: None,

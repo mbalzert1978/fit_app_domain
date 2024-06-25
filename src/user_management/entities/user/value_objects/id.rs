@@ -8,22 +8,22 @@ use super::ValueObject;
 
 #[derive(Clone)]
 #[cfg_attr(test, derive(PartialEq, Debug))]
-pub(crate) struct Id<Tid>(Tid);
+pub(crate) struct DomainId<Tid>(Tid);
 
-impl<Tid> Id<Tid> {
+impl<Tid> DomainId<Tid> {
     pub(crate) fn new(id_provider: IdProvider<Tid>) -> Self {
         Self(id_provider.now_v7())
     }
 }
 
-impl<Tid> ValueObject for Id<Tid> {
+impl<Tid> ValueObject for DomainId<Tid> {
     type Value = Tid;
     fn get_value(&self) -> &Self::Value {
         &self.0
     }
 }
 
-impl<Tid> FromStr for Id<Tid>
+impl<Tid> FromStr for DomainId<Tid>
 where
     Tid: FromStr,
     <Tid as FromStr>::Err: Display,
