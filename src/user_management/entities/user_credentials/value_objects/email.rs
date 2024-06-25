@@ -1,7 +1,6 @@
 use crate::prelude::*;
-use crate::user_management::entities::user::abstractions::EmailValidator;
-
-use super::ValueObject;
+use crate::shared::ValueObject;
+use crate::user_management::entities::user_credentials::abstractions::EmailValidator;
 
 #[derive(Clone)]
 #[cfg_attr(test, derive(Debug))]

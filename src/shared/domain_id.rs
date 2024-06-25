@@ -2,9 +2,8 @@ use std::fmt::Display;
 use std::str::FromStr;
 
 use crate::prelude::*;
+use crate::shared::ValueObject;
 use crate::user_management::entities::user::abstractions::IdProvider;
-
-use super::ValueObject;
 
 #[derive(Clone, PartialEq)]
 #[cfg_attr(test, derive(Debug))]

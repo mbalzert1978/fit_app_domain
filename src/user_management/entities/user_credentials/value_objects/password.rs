@@ -1,8 +1,9 @@
 use std::str::FromStr;
 
-use super::{password_hash::PasswordHash, ValueObject};
+use super::password_hash::PasswordHash;
 
 use crate::prelude::*;
+use crate::shared::ValueObject;
 
 const MIN_LENGTH: usize = 12;
 const DIGIT_BASE: u32 = 10;

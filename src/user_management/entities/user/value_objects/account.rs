@@ -1,4 +1,4 @@
-use super::ValueObject;
+use crate::shared::ValueObject;
 
 #[derive(Clone)]
 #[cfg_attr(test, derive(Debug, PartialEq))]

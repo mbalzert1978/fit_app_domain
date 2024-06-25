@@ -1,4 +1,5 @@
 use super::password::Password;
+
 #[derive(Clone)]
 pub struct PasswordHash(String);
 
